@@ -7,6 +7,9 @@ We use YOLOv7 for object detection and STereo TRansformer for stereo depth estim
 STTR generates the disparity map, and from that we can get the depth using the formula:
 >𝑑𝑒𝑝𝑡ℎ=  (𝑏𝑎𝑠𝑒𝑙𝑖𝑛𝑒×𝑓𝑜𝑐𝑎𝑙 𝑙𝑒𝑛𝑔𝑡ℎ)/𝑑𝑖𝑠𝑝𝑎𝑟𝑖𝑡𝑦
 
+![Disparity Map!](/assets/obj_det_demo.jpg) | ![Disparity Map!](/assets/disparity.png) 
+:---: | :---:
+Object Detection Demo | Disaprity Map
 ## Usage
 1. First install the requirements:
    > pip install -r requirements.txt
@@ -18,6 +21,10 @@ STTR generates the disparity map, and from that we can get the depth using the f
 ## Results
 For object detection, we used recall, precision, and mAp to evaluate our model. Once the metrics had plateaued, we stopped training the model.
 
+![Disparity Map!](/assets/595per.png) | ![Disparity Map!](/assets/precision.png) | ![Disparity Map!](/assets/recall.png) 
+:---: | :---: | :---:
+mAp | Precision | Recall
+
 As for the Stereo Depth estimation we used 3px Error, EPE and Occ IOU. Our values were close enough to the optimal STTR model, that we were satisfied with our training.
 | | 3px Error  | EPE | Occ IOU |
 | ------------- | ------------- | ------------- | ------------- |
@@ -25,3 +32,5 @@ As for the Stereo Depth estimation we used 3px Error, EPE and Occ IOU. Our value
 |STTR Model | 6.74  | 1.50  | 0.98 |
 
 Here is the demo video for the final output:
+
+[![Demo VIieo](https://img.youtube.com/vi/YAVU_zzeFWI/0.jpg)](https://www.youtube.com/watch?v=YAVU_zzeFWI)
